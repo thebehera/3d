@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>3D Playground</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Michroma&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { color-scheme: dark; --bg: #07080f; --card: #10131f; --rule: #232a3d; --text: #e8ecff; --dim: #8e97b5; --cyan: #5ef0ff; --sun: #FFC14D; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font: 16px/1.5 "Instrument Sans", system-ui, sans-serif;
+  padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom)); }
+main { max-width: 860px; margin: 0 auto; }
+h1 { font: 400 clamp(22px, 4vw, 30px) Michroma, sans-serif; letter-spacing: .12em; margin: 8px 0 4px; }
+.lead { color: var(--dim); margin: 0 0 28px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+a.card { display: grid; gap: 8px; padding: 22px; border-radius: 16px; background: var(--card); border: 1px solid var(--rule); color: inherit; text-decoration: none; transition: border-color .2s, transform .2s; }
+a.card:hover, a.card:focus-visible { border-color: var(--cyan); transform: translateY(-2px); outline: none; }
+.card h2 { margin: 0; font-weight: 400; }
+.ff h2 { font: 400 20px Michroma, sans-serif; letter-spacing: .1em; color: var(--cyan); }
+.sd h2 { font: 400 32px "Lilita One", sans-serif; color: var(--sun); }
+.card p { margin: 0; color: var(--dim); font-size: 15px; }
+.tag { font-size: 12px; color: var(--text); opacity: .8; }
+footer { margin-top: 28px; color: var(--dim); font-size: 13px; }
+footer a { color: var(--cyan); }
+</style>
+</head>
+<body>
+<main>
+  <h1>3D PLAYGROUND</h1>
+  <p class="lead">Two browser builds. Both run on a phone.</p>
+  <div class="grid">
+    <a class="card ff" href="facefield/">
+      <h2>FACEFIELD</h2>
+      <p>Your face as spatial art: hologram, dispersal, pin-screen and blueprint. Tap <b>Use camera</b> and it follows your head, blinks, mouth and voice.</p>
+      <span class="tag">Front camera · iPhone Safari, Chrome, desktop</span>
+    </a>
+    <a class="card sd" href="sky-duel/">
+      <h2>Sky Duel</h2>
+      <p>Two tanks, one island. Aim, hold Fire to charge, let go. Pass the phone between turns.</p>
+      <span class="tag">Pass and play · touch or keyboard</span>
+    </a>
+  </div>
+  <footer>The Facefield iPhone app adds ARKit face tracking and the TrueDepth depth map. Source and build steps are on <a href="https://github.com/thebehera/3d">GitHub</a>.</footer>
+</main>
+</body>
+</html>
